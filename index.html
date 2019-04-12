@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/spaceship.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>| ArtofGalaxy</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg container col-sm-12 col-lg-10 navbar-dark fixed-top">
+        <a class="navbar-brand logotype" href="http://localhost:7881/#" id="logo">ArtofGalaxy</a>
+        <div class="" id="overlay"></div>
+        <button class="navbar-toggler button-menu text-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" id="burger-button" aria-label="Toggle navigation">
+          <span class=""><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse father-container" id="navbarNavAltMarkup">
+          <div class="navbar-nav buttons-container">
+            <a class="nav-item nav-link" href="#container-planet-earth" id="buttonearth">Earth</a>
+            <a class="nav-item nav-link" href="#container-planet-mars" id="buttonmars">Mars</a>
+            <a class="nav-item nav-link" href="#container-planet-jupiter" id="buttonjupiter">Jupiter</a>
+            <a class="nav-item nav-link" href="#container-planet-saturn" id="buttonsaturn">Saturn</a>
+            <a class="nav-item nav-link" href="#container-planet-uranus" id="buttonuranus">Uranus</a>
+            <a class="nav-item nav-link" href="#container-planet-neptune" id="buttonneptune">Neptune</a>
+            <a class="nav-item nav-link" href="#container-planet-mercury" id="buttonmercury">Mercury</a>
+            <a class="nav-item nav-link" href="#container-planet-venus" id="buttonvenus">Venus</a>
+          </div>
+        </div>
+        <div class="rocket">
+          <hr><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="space-shuttle" class="svg-inline--fa fa-space-shuttle fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M592.604 208.244C559.735 192.836 515.777 184 472 184H186.327c-4.952-6.555-10.585-11.978-16.72-16H376C229.157 137.747 219.403 32 96.003 32H96v128H80V32c-26.51 0-48 28.654-48 64v64c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v16c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v64c0 35.346 21.49 64 48 64V352h16v128h.003c123.4 0 133.154-105.747 279.997-136H169.606c6.135-4.022 11.768-9.445 16.72-16H472c43.777 0 87.735-8.836 120.604-24.244C622.282 289.845 640 271.992 640 256s-17.718-33.845-47.396-47.756zM488 296a8 8 0 0 1-8-8v-64a8 8 0 0 1 8-8c31.909 0 31.942 80 0 80z"></path></svg>
+        </div>
+      </nav>
+      <div class="jumbotron title container bg-transparent text-center">
+            <h1 class="display-3 text-light">"Once we accept our limits,</h1>
+            <h2 class="display-4 text-light">We go beyond them".</h2>
+            <h3 class="text-dark blockquote-footer">By Humans</h3>
+      </div>
+  </header>
+  <div class="overlay-body" id="overlay-planet"></div>
+  <section class="main container-fluid">
+    <!-- EARTH -->
+    <div class="container-planet" id="container-planet-earth">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-earth">
+          <figure class="offset-md-6 col-md-6 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-earth">
+            <img src="images/earth-png.png" alt="earth">
+          </figure>
+            <div class="col-md-6 content-text text-center text-light" id="content-text-earth">
+              <div class="col-md-12 content-text-child">
+                  <p class="col-md-12" id="content-text-change-earth">Earth, our home, is the third planet from the sun. It's the only planet known to have an atmosphere containing free oxygen, oceans of water on its surface and, of course, life.</p>
+                  <hr class="col-sm-12">
+                  <div class="col-sm-12">
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front rectangle-active" id="rec1earth"></div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front" id="rec2earth"></div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front" id="rec3earth"></div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- MARS --> 
+    <div class="container-planet" id="container-planet-mars">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-mars">
+        <figure class="col-md-6 offset-sm-3 offset-md-0 col-sm-6 offset-2 col-8" id="img-planet-mars">
+          <img src="images/mars-png-2.png" alt="mars">
+        </figure>
+        <div class="offset-md-6 col-md-6 content-text text-center text-light" id="content-text-mars">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-mars">Mars is the fourth planet from the sun. Befitting the Red Planet's bloody color, the Romans named it after their god of war. In truth, the Romans copied the ancient Greeks, who also named the planet after their god of war, Ares.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1mars"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2mars"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3mars"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JUPITER -->
+    <div class="container-planet" id="container-planet-jupiter">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-jupiter">
+          <figure class="offset-md-6 col-md-6 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-jupiter">
+              <img src="images/jupiter-png-2.png" alt="jupiter">
+            </figure>
+            <div class="col-md-6 content-text text-center text-light" id="content-text-jupiter">
+              <div class="col-md-12 content-text-child">
+                  <p class="col-md-12" id="content-text-change-jupiter">Jupiter is the largest planet in the solar system. Fittingly, it was named after the king of the gods in Roman mythology. In a similar manner, the ancient Greeks named the planet after Zeus, the king of the Greek pantheon.</p>
+                  <hr class="col-sm-12">
+                  <div class="col-sm-12">
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front rectangle-active" id="rec1jupiter"></div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front" id="rec2jupiter"></div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="back"></div>
+                        <div class="front" id="rec3jupiter"></div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- SATURN -->
+    <div class="container-planet" id="container-planet-saturn">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-saturn">
+        <figure class="col-md-6 offset-md-0 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-saturn">
+          <img src="images/saturn-png-2.png" alt="satrun">
+        </figure>
+        <div class="offset-md-6 col-md-6 content-text text-center text-light" id="content-text-saturn">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-saturn">Saturn is the sixth planet from the sun and the second largest planet in the solar system. Saturn was the Roman name for Cronus, the lord of the Titans in Greek mythology. Saturn is the root of the English word 'Saturda'.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1saturn"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2saturn"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3saturn"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- URANUS -->
+    <div class="container-planet" id="container-planet-uranus">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-uranus">
+        <figure class="offset-md-6 col-md-6 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-uranus">
+          <img src="images/uranus-png.png" alt="uranus">
+        </figure>
+        <div class="col-md-6 content-text text-center text-light" id="content-text-uranus">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-uranus">Uranus is the seventh planet from the sun and the first to be discovered by scientists. Although Uranus is visible to the naked eye, it was long mistaken as a star because of the planet's dimness and slow orbit.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1uranus"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2uranus"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3uranus"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- NEPTUNE -->
+    <div class="container-planet" id="container-planet-neptune">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-neptune">
+        <figure class="col-md-6 offset-md-0 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-neptune">
+          <img src="images/neptune-png.png" alt="neptune">
+        </figure>
+        <div class="offset-md-6 col-md-6 content-text text-center text-light" id="content-text-neptune">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-neptune">Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12"> 
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1neptune"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2neptune"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3neptune"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- MERCURY -->
+    <div class="container-planet" id="container-planet-mercury">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-mercury">
+        <figure class="offset-md-6 col-md-6 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-mercury">
+          <img src="images/mercury-png-2.png" alt="mercury">
+        </figure>
+        <div class="col-md-6 content-text text-center text-light" id="content-text-mercury">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-mercury">Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1mercury"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2mercury"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3mercury"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- VENUS -->
+    <div class="container-planet" id="container-planet-venus">
+      <div class="row">
+      <div class="fixed-container-planet" id="fixed-container-planet-venus">
+        <figure class="col-md-6 offset-md-0 offset-sm-3 col-sm-6 offset-2 col-8" id="img-planet-venus">
+          <img src="images/venus-png.png" alt="venus">
+        </figure>
+        <div class="offset-md-6 col-md-6 content-text text-center text-light" id="content-text-venus">
+          <div class="col-md-12 content-text-child">
+              <p class="col-md-12" id="content-text-change-venus">Venus, the second planet from the sun, is named for the Roman goddess of love and beauty. The planet — the only planet named after a female — may have been named for the most beautiful deity of her pantheon because it shone the brightest of the five planets known to ancient astronomers.</p>
+              <hr class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front rectangle-active" id="rec1venus"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec2venus"></div>
+                </div>
+                <div class="rectangle">
+                    <div class="back"></div>
+                    <div class="front" id="rec3venus"></div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="logotype-footer col-md-8">
+        <a class="col-md-12 logo" href="#">ArtofGalaxy</a>
+        <div class="col-md-12 rocket">
+          <hr><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="space-shuttle" class="svg-inline--fa fa-space-shuttle fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M592.604 208.244C559.735 192.836 515.777 184 472 184H186.327c-4.952-6.555-10.585-11.978-16.72-16H376C229.157 137.747 219.403 32 96.003 32H96v128H80V32c-26.51 0-48 28.654-48 64v64c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v16c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v64c0 35.346 21.49 64 48 64V352h16v128h.003c123.4 0 133.154-105.747 279.997-136H169.606c6.135-4.022 11.768-9.445 16.72-16H472c43.777 0 87.735-8.836 120.604-24.244C622.282 289.845 640 271.992 640 256s-17.718-33.845-47.396-47.756zM488 296a8 8 0 0 1-8-8v-64a8 8 0 0 1 8-8c31.909 0 31.942 80 0 80z"></path></svg>
+        </div>
+        <div class="mt-5 col-md-12">
+          <div class="col-sm-3 float">
+            <h6>References</h6>
+            <a href="#">space.com</a>
+            <a href="#">pexels.com</a>
+          </div>
+          <div class="col-sm-3 float">
+            <h6>More Information</h6>
+            <a href="#">space.com</a>
+          </div>
+          <div class="col-sm-3 float">
+            <h6>Fonts</h6>
+            <a href="#">Google Fonts</a>
+          </div>
+          <div class="col-sm-3 float">
+            <h6>Images</h6>
+            <a href="#">pexels.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 container-cuadro-planets">
+          <div class="row">
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Earth</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Mars</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Jupiter</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Saturn</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Uranus</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Neptune</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Mercury</h6>
+            </div>
+            <div class="col-md-12 col-sm-3 col-6 container-cuadro">
+              <div class="cuadro"></div>
+              <h6>Venus</h6>
+            </div>
+          </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+<script src="js/main.js"></script>
+</body>
+</html>

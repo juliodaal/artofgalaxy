@@ -1,0 +1,273 @@
+// Planets
+.main {
+    grid-area: 'main';
+    padding: 0;
+
+}
+.container-planet{
+    width: 100%;
+    // 1250px
+    height: 100vh;
+    margin-bottom: 5px;
+}
+// .container-planet:nth-of-type(1){background: red;}
+// .container-planet:nth-of-type(2){background: blue;}
+// .container-planet:nth-of-type(3){background: purple;}
+// .container-planet:nth-of-type(4){background: pink;}
+// .container-planet:nth-of-type(5){background: royalblue;}
+// .container-planet:nth-of-type(6){background: yellow;}
+// .container-planet:nth-of-type(7){background: orange;}
+// .container-planet:nth-of-type(8){background: green;}
+
+.container-planet figure{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // z-index: -1;
+    transition: 1s;
+}
+.container-planet:nth-of-type(1) figure{
+    @include propertyPlanets(100%);
+}
+.container-planet:nth-of-type(2) figure{
+    @include propertyPlanets(-100%);
+}
+.container-planet:nth-of-type(3) figure{
+    @include propertyPlanets(100%);
+}
+.container-planet:nth-of-type(4) figure{
+    @include propertyPlanets(-100%);
+}
+.container-planet:nth-of-type(5) figure{
+    @include propertyPlanets(100%);
+}
+.container-planet:nth-of-type(6) figure{
+    @include propertyPlanets(-100%);
+}
+.container-planet:nth-of-type(7) figure{
+    @include propertyPlanets(100%);
+}
+.container-planet:nth-of-type(8) figure{
+    @include propertyPlanets(-100%);
+}
+figure img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+	animation: UpDown 10s linear alternate infinite;
+}
+//content text
+.fixed-container-planet{
+    width: 100%;
+    transition: 1s;
+}
+.row{
+    width: 100%;
+    margin: 0;
+}
+.container-planet .content-text {
+    position: relative;
+    display: block;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-content: center;    
+    flex-wrap: wrap;
+    height: 100vh;
+    opacity: 0;
+    hr{
+        border: 1px solid #fff;
+        width: 50%;
+    }
+    p{
+        font-size: $font-size-content-text;
+        height: auto;
+    }
+    div{
+        display: inline-block;
+    }
+}
+.content-text-child{
+    position: relative;
+}
+.rectangle{
+    position: relative;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 1;
+    animation: round 10s linear infinite;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translate(0,0);
+    animation: roundFrist 10s linear infinite alternate;
+}
+.back:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -0;
+    border-radius: 50%;
+    transform: translate(0,0);
+    animation: roundSecond 10s linear infinite alternate;
+}
+.back:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -0;
+    border-radius: 50%;
+    transform: translate(0,0);
+    animation: roundThree 10s linear infinite alternate;
+}
+.front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: scale(1);
+    opacity: 1;
+    background: $color-dark-blue;
+    cursor: pointer;
+    animation: overlayCircleE 1s linear infinite;
+}
+#content-text-earth .back,
+#content-text-earth .back:before,
+#content-text-earth .back:after{
+    background: $color-earth;
+}
+#content-text-mars .back,
+#content-text-mars .back:before,
+#content-text-mars .back:after{
+    background: $color-mars;
+}
+#content-text-jupiter .back,
+#content-text-jupiter .back:before,
+#content-text-jupiter .back:after{
+    background: $color-jupiter;
+}
+#content-text-saturn .back,
+#content-text-saturn .back:before,
+#content-text-saturn .back:after{
+    background: $color-saturn;
+}
+#content-text-uranus .back,
+#content-text-uranus .back:before,
+#content-text-uranus .back:after{
+    background: $color-uranus;
+}
+#content-text-neptune .back,
+#content-text-neptune .back:before,
+#content-text-neptune .back:after{
+    background: $color-neptune;
+}
+#content-text-mercury .back,
+#content-text-mercury .back:before,
+#content-text-mercury .back:after{
+    background: $color-mercury;
+}
+#content-text-venus  .back,
+#content-text-venus  .back:before,
+#content-text-venus  .back:after{
+    background: $color-venus    ;
+}
+#content-text-earth .rectangle-active{
+    // background: $color-earth;
+    box-shadow: 0 0 20px $color-earth;
+}
+#content-text-mars .rectangle-active{
+    // background: $color-mars;
+    box-shadow: 0 0 20px $color-mars;
+}
+#content-text-jupiter .rectangle-active{
+    // background: $color-jupiter;
+    box-shadow: 0 0 20px $color-jupiter;
+}
+#content-text-saturn .rectangle-active{
+    // background: $color-saturn;
+    box-shadow: 0 0 20px $color-saturn;
+}
+#content-text-uranus .rectangle-active{
+    // background: $color-uranus;
+    box-shadow: 0 0 20px $color-uranus;
+}
+#content-text-neptune .rectangle-active{
+    // background: $color-neptune;
+    box-shadow: 0 0 20px $color-neptune;
+}
+#content-text-mercury .rectangle-active{
+    // background: $color-mercury;
+    box-shadow: 0 0 20px $color-mercury;
+}
+#content-text-venus .rectangle-active{
+    // background: $color-venus;
+    box-shadow: 0 0 20px $color-venus;
+}
+// Animations
+  @keyframes UpDown {
+    0% {
+          transform: translateY(0);
+       }
+   50% {
+          transform: translateY(-25px);
+       }
+   100% {
+          transform: translateY(25px);
+       }
+    }
+    @keyframes round {
+    0% {
+          transform: rotate(0);
+       }
+   100% {
+          transform: rotate(360deg);
+       }
+    }
+    @keyframes roundFrist {
+    0% {
+          transform: translate(0,0);
+          opacity: 1;
+       }
+   100% {
+          transform: translate(0,-5px);
+          opacity: 0;
+       }
+    }
+    @keyframes roundSecond {
+    0% {
+          transform: translate(0,0);
+          opacity: 1;
+       }
+   100% {
+          transform: translate(-5px,5px);
+          opacity: 0;
+       }
+    }
+    @keyframes roundThree {
+    0% {
+          transform: translate(0,0);
+          opacity: 1;
+       }
+   100% {
+          transform: translate(5px,5px);
+          opacity: 0;
+       }
+    }

@@ -1,0 +1,59 @@
+//Property Navbar
+.navbar{
+    display: grid;
+    grid-template-areas: 'logotype buttons-container''rocket rocket';
+    grid-template-columns: repeat(2, 1fr);
+ }
+ @include propertyButton($color-earth, 1);
+ @include propertyButton($color-mars, 2);
+ @include propertyButton($color-jupiter, 3);
+ @include propertyButton($color-saturn, 4);
+ @include propertyButton($color-uranus, 5);
+ @include propertyButton($color-neptune, 6);
+ @include propertyButton($color-mercury, 7);
+ @include propertyButton($color-venus, 8);
+ // Property Logotype
+ .logotype {
+    grid-area: logotype;
+    font-size: $font-size-logotype;
+ }
+ // Property Button
+ .father-container{
+    grid-area: buttons-container;
+    display: flex;
+    justify-content: flex-end;
+ }
+ // Property Rocket
+ .rocket{
+    grid-area: rocket;
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    hr{
+       width: calc(170px - 10px);
+       margin: 0;
+       margin-right: 10px;
+       border: 1px solid $color-white;
+       transition: .8s;
+    }
+    svg{
+       width: 25px;
+       height: 25px;
+       color: $color-white;
+    }
+ }
+ .navbar:hover .rocket hr {
+    width: calc(100% - 10px);
+ }
+ .buttons-container{
+    font-size: $font-size-button-nav;
+ }
+ // Property Menu
+ .button-menu {
+    grid-area: buttons-container;
+    border: none;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+ }

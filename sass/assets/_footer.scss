@@ -1,0 +1,44 @@
+footer{
+    margin-top: 300px;
+    background: $color-dark-blue;
+}
+.logotype-footer{
+    margin: 20px 0px 0px 40px;
+}
+.logotype-footer .logo{
+    font-size: $font-size-logotype;
+    text-decoration: none;
+    color: $color-white;
+}
+.logotype-footer h6{
+    color: $color-white;
+}
+.logotype-footer a{
+    font-size: 18px;
+    text-decoration: none;
+    color: $color-white;
+}
+.float{
+    float: left;
+}
+.container-cuadro-planets{
+    margin: 40px 0 0 0;
+}
+.container-cuadro{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.container-cuadro h6{
+    color: $color-white;
+    margin: 0 0 0 10px;
+    font-weight: 400;
+}
+@include propertyFooterPlanets(1, $color-earth);
+@include propertyFooterPlanets(2, $color-mars);
+@include propertyFooterPlanets(3, $color-jupiter);
+@include propertyFooterPlanets(4, $color-saturn);
+@include propertyFooterPlanets(5, $color-uranus);
+@include propertyFooterPlanets(6, $color-neptune);
+@include propertyFooterPlanets(7, $color-mercury);
+@include propertyFooterPlanets(8, $color-venus);

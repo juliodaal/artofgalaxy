@@ -1,0 +1,8 @@
+// Property Header
+header {
+   grid-area: 'header';
+   display: flex;
+   align-items: center;
+   height: 100vh;
+}
+@import 'assets/navbar.scss';

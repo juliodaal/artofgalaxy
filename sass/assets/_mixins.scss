@@ -1,0 +1,18 @@
+@mixin propertyButton($color, $i) {
+    .navbar-nav a:nth-of-type(#{$i}).active{
+    color: $color !important;
+    transition: .3s;
+    border-bottom: 1px solid $color;
+    }
+}
+@mixin propertyPlanets($left) {
+    left: $left;
+}
+@mixin propertyFooterPlanets($i, $color){
+    .container-cuadro:nth-of-type(#{$i}) .cuadro{
+        background: $color;
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+    }
+}

@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: $color-background;
+    // background: red;
+    display: grid;
+    grid-template-areas: 'header''main''footer';
+    overflow-x: hidden;
+}
+.overlay-body{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba($color-earth, .2), transparent 50%);
+ }
